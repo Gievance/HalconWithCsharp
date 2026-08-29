@@ -136,7 +136,9 @@ public partial class HDevelopExport
 #if !(NO_EXPORT_MAIN || NO_EXPORT_APP_MAIN)
 public class HDevelopExportApp
 {
-  static void Main(string[] args)
+  // Rename generated Main to avoid multiple entry point conflict with the WinForms Program.Main.
+  // Call HDevelopMain from code if needed.
+  public static void HDevelopMain(string[] args)
   {
     new HDevelopExport();
   }

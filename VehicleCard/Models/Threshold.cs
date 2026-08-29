@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
-namespace HalconWithCsharp_CarCard.Models
+namespace HalconWithCsharp.VehicleCard.Models
 {
     public class Threshold
     {

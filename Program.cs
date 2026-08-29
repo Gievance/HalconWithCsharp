@@ -1,3 +1,7 @@
+#region 车牌校正
+using HalconWithCsharp.VehicleCard;
+#endregion
+
 namespace HalconWithCsharp_CarCard
 {
     internal static class Program

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using static System.ComponentModel.TypeConverter;
-namespace HalconWithCsharp_CarCard.Models
+namespace HalconWithCsharp.VehicleCard.Models
 {
     public class Feature
     {
