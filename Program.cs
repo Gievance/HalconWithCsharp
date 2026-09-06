@@ -1,5 +1,6 @@
 #region 车牌校正
 using HalconWithCsharp.VehicleCard;
+using HalconWithCsharp.HKCamera;
 #endregion
 
 namespace HalconWithCsharp_CarCard
@@ -15,7 +16,7 @@ namespace HalconWithCsharp_CarCard
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainFrm());
+            Application.Run(new HKFrm());
         }
     }
 }

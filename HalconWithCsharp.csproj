@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AdhesiveBead.cs" />
+    <Compile Remove="AdhesiveBead.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="AdhesiveBead.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvCameraControl.Net" Version="1.1.0" />
     <PackageReference Include="MVTec.HalconDotNet-Windows" Version="24050.0.0" />
   </ItemGroup>
 
