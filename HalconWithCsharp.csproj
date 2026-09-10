@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -23,9 +23,43 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="AdhesiveBead\HalconFunc\AlignImage.hdvp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\HalconFunc\Gen_AdhesiveBead_Contour.hdvp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_04.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_05.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_06.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_07.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="AdhesiveBead\imgs\adhesive_bead_ref.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="VehicleCard\imgs\汽车.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AdhesiveBead\icons\" />
   </ItemGroup>
 
 </Project>

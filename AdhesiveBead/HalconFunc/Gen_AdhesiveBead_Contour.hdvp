@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="24.05.0.0">
+<procedure name="Gen_AdhesiveBead_Contour">
+<interface>
+<oo>
+<par name="Contour" base_type="iconic" dimension="0"/>
+</oo>
+<ic>
+<par name="WindowHandle" base_type="ctrl" dimension="0"/>
+</ic>
+<oc>
+<par name="Rows" base_type="ctrl" dimension="0"/>
+<par name="Columns" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<body>
+<l>ColumnsOut := []</l>
+<l>RowsOut := []</l>
+<l>while(1)</l>
+<l>    get_mbutton (WindowHandle, Row1, Column1, Button)</l>
+<l>    if(Button==1)</l>
+<l>        RowsOut := [RowsOut,Row1]</l>
+<l>        ColumnsOut := [ColumnsOut,Column1]</l>
+<l>        gen_empty_obj (Concatobj)</l>
+<l>        if (|RowsOut|&gt;1)</l>
+<c>            * 生成局部轨迹</c>
+<l>            for i := 0 to |RowsOut|-2 by 1</l>
+<l>                gen_arrow_contour_xld (Arrow, RowsOut[i], ColumnsOut[i], RowsOut[i+1], ColumnsOut[i+1], 5, 5)</l>
+<l>                concat_obj (Concatobj, Arrow, Concatobj)</l>
+<l>            endfor</l>
+<l>        endif</l>
+<l>    elseif(Button==4)</l>
+<l>            n:= |RowsOut|</l>
+<l>            if(n&gt;2)</l>
+<l>                RowsOut :=RowsOut[0:n-2]</l>
+<l>                ColumnsOut:=ColumnsOut[0:n-2]</l>
+<l>                gen_empty_obj (Concatobj)</l>
+<l>                if(|RowsOut|&gt;2)</l>
+<l>                    for i := 0 to |RowsOut|-2 by 1</l>
+<l>                        gen_arrow_contour_xld (Arrow, RowsOut[i], ColumnsOut[i], RowsOut[i+1], ColumnsOut[i+1], 5, 5)</l>
+<l>                        concat_obj (Concatobj, Arrow, Concatobj)</l>
+<l>                    endfor</l>
+<l>                endif</l>
+<l>                dev_display (Concatobj)</l>
+<l>                flush_buffer(WindowHandle)</l>
+<l>            endif</l>
+<c>            </c>
+<c>            </c>
+<l>    else</l>
+<l>        if(Button==2)</l>
+<l>            break</l>
+<l>        endif</l>
+<l>*         if(Button==4)</l>
+<l>*             if (|RowsOut|&gt;1)</l>
+<l>*                 distance_pp (RowsOut[0], ColumnsOut[0], Row1, Column1, Distance)</l>
+<l>*                 if(Distance&lt;25)</l>
+<l>*                     if (RowsOut[0]!=RowsOut[|RowsOut|-1] or ColumnsOut[0]!= ColumnsOut[|RowsOut-1|])</l>
+<l>*                         RowsOut := [RowsOut,RowsOut[0]]</l>
+<l>*                         ColumnsOut := [ColumnsOut,ColumnsOut[0]]</l>
+<l>*                     endif</l>
+<l>*                 endif</l>
+<l>*             break</l>
+<l>*             endif</l>
+<l>*         endif</l>
+<l>    endif </l>
+<l>endwhile</l>
+<c></c>
+<l>gen_contour_nurbs_xld (Contour, RowsOut, ColumnsOut, 'auto', 'auto', 3, 1, 5)</l>
+<l>Rows:= RowsOut</l>
+<l>Columns:=ColumnsOut</l>
+<l>return ()</l>
+</body>
+<docu id="Gen_AdhesiveBead_Contour">
+<parameters>
+<parameter id="Columns"/>
+<parameter id="Contour"/>
+<parameter id="Rows"/>
+<parameter id="WindowHandle"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

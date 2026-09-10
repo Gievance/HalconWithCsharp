@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="24.05.0.0">
+<procedure name="AlignImage">
+<interface>
+<io>
+<par name="InputImage" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="AlignedImage" base_type="iconic" dimension="0"/>
+</oo>
+<ic>
+<par name="ModelID" base_type="ctrl" dimension="0"/>
+<par name="RowCenter" base_type="ctrl" dimension="0"/>
+<par name="ColumnCenter" base_type="ctrl" dimension="0"/>
+</ic>
+</interface>
+<body>
+<c>* 模版匹配对象,矩阵以模版中心为原点</c>
+<l>find_planar_uncalib_deformable_model(InputImage, ModelID, -0.39, 0.78, 1, 1, 1, 1, 0.5, 1, 1, 0, 0.9, [], [], HomMat2D, Score)</l>
+<c>* 矩阵逆变换，将输入图像校正到中心</c>
+<l>hom_mat2d_invert (HomMat2D, HomMat2DInvert)</l>
+<c>* Project以左上角视角看，find以中心视角看，比如,find 将(50,50)认为中心的矩阵，project认为该点为左上点，需要project补偿到中心点，即覆盖整个匹配对象。</c>
+<l>hom_mat2d_translate (HomMat2DInvert, RowCenter, ColumnCenter, HomMat2DTranslate)</l>
+<l>projective_trans_image (InputImage, AlignedImage, HomMat2DTranslate, 'bilinear', 'false', 'false')</l>
+<l>return ()</l>
+</body>
+<docu id="AlignImage">
+<parameters>
+<parameter id="AlignedImage"/>
+<parameter id="ColumnCenter"/>
+<parameter id="InputImage"/>
+<parameter id="ModelID"/>
+<parameter id="RowCenter"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>
