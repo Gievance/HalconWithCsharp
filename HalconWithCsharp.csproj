@@ -6,11 +6,14 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+	<ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+	<ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="AdhesiveBead.cs" />
     <Compile Remove="AdhesiveBead.Designer.cs" />
+    <Compile Remove="Pipe3DMatching\HalconFunc\3D管道.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,8 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Log4netComponent" Version="1.0.0" />
     <PackageReference Include="MvCameraControl.Net" Version="1.1.0" />
     <PackageReference Include="MVTec.HalconDotNet-Windows" Version="24050.0.0" />
+    <PackageReference Include="ZXCustomControlLib" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +58,75 @@
     <None Update="AdhesiveBead\imgs\adhesive_bead_ref.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_00.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_01.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_02.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_03.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_04.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_05.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_06.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_07.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_08.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_09.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_10.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_11.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_12.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_13.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_14.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_15.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_16.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_17.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_18.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_19.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_20.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Pipe3DMatching\素材\om3\universal_joint_part_xyz_21.om3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="VehicleCard\imgs\汽车.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -60,6 +134,16 @@
 
   <ItemGroup>
     <Folder Include="AdhesiveBead\icons\" />
+    <Folder Include="Pipe3DMatching\HalconFunc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pipe3DMatching\MyControl\ZhaoxiGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Pipe3DMatching\MyControl\ZhaoxiMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

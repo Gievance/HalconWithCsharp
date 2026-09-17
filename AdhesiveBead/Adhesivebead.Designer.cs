@@ -1,4 +1,6 @@
-﻿namespace HalconWithCsharp.AdhesiveBead
+﻿using HalconWithCsharp.AdhesiveBead.MyControl;
+
+namespace HalconWithCsharp.AdhesiveBead
 {
     partial class Adhesivebead
     {
@@ -293,15 +295,15 @@
 
         #endregion
 
-        private MyControl.ZhaoxiGroupBox zhaoxiGroupBox1;
-        private MyControl.ZhaoxiGroupBox zhaoxiGroupBox2;
+        private ZhaoxiGroupBox zhaoxiGroupBox1;
+        private ZhaoxiGroupBox zhaoxiGroupBox2;
         private Button btn_drawBeadWidth;
         private Button btn_createBeadModel;
         private Button btn_drawBead;
         private Button btn_createModel;
         private Button btn_getRefRegion;
         private Button btn_loadRefImage;
-        private MyControl.ZhaoxiGroupBox zhaoxiGroupBox3;
+        private ZhaoxiGroupBox zhaoxiGroupBox3;
         private Button btn_preBead;
         private Button btn_action;
         private Button btn_loadDetImage;

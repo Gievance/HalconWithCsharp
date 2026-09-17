@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
-namespace HalconWithCsharp.AdhesiveBead.MyControl
+namespace HalconWithCsharp.Pipe3DMatching.MyControl
 {
     /// <summary>
     /// 朝夕自定义GroupBox
@@ -12,7 +12,7 @@ namespace HalconWithCsharp.AdhesiveBead.MyControl
         private Color _backgroundColor = ColorTranslator.FromHtml("#006CBE"); // 默认背景颜色
         private string _customTitle = ""; // 默认标题
         private ContentAlignment _titleAlignment = ContentAlignment.TopLeft; // 默认标题位置为左上角
-        private int _titleHeight = 40; // 标题背景条的高度
+        private int _titleHeight = 70; // 标题背景条的高度
 
         // 设置背景颜色
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
