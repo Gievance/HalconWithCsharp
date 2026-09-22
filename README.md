@@ -15,3 +15,41 @@
 <img src="docs/PointCloud3D.jpg" width="600" alt="演示图">
 <img src="docs/PointCloud3D2.jpg" width="600" alt="演示图">
 <img src="docs/PointCloud3D3.jpg" width="600" alt="演示图">
+
+
+# DLWithClassification_Battery
+> Winform+Halcon+深度学习模型
+
+**数据集组织结构**
+```
+..
+└── data
+    ├── 5号电池
+    ├── 7号电池
+    ├── U盘
+    ├── 接线器
+    └── 锂电池
+```
+注意：
+1. 以最后文件夹名作为类别
+
+
+**可选模型(Halcon提供)**
+```
+pretrained_dl_classifier_alexnet.hdl
+pretrained_dl_classifier_compact.hdl
+pretrained_dl_classifier_enhanced.hdl
+pretrained_dl_classifier_mobilenet_v2.hdl
+pretrained_dl_classifier_resnet18.hdl
+pretrained_dl_classifier_resnet50.hdl
+```
+
+**辅助库**
+
+1. C#对深度学习支持的库（方便Halcon函数调用）
+
+
+
+**项目开发手记**
+1. GroupBox的渲染不够灵活，重新修改了GroupBox=> 根据字体调整标题条
+1. 
