@@ -134,10 +134,14 @@
 
   <ItemGroup>
     <Folder Include="AdhesiveBead\icons\" />
+    <Folder Include="DLWithClassification_Battery\PretrainedModel\" />
     <Folder Include="Pipe3DMatching\HalconFunc\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DLWithClassification_Battery\Controls\WGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Pipe3DMatching\MyControl\ZhaoxiGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>

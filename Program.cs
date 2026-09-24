@@ -3,6 +3,7 @@ using HalconWithCsharp.VehicleCard;
 using HalconWithCsharp.HKCamera;
 using HalconWithCsharp.AdhesiveBead;
 using HalconWithCsharp.Pipe3DMatching;
+using HalconWithCsharp.DLWithClassification_Battery;
 #endregion
 
 namespace HalconWithCsharp_CarCard
@@ -18,7 +19,7 @@ namespace HalconWithCsharp_CarCard
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new PipeFrm());
+            Application.Run(new DLBattery());
         }
     }
 }
