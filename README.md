@@ -55,3 +55,16 @@ pretrained_dl_classifier_resnet50.hdl
 2. 训练数小于模型批大小报错=》获取的是预训练模型，不是修改模型参数后的模型；
 3. 模型训练的逻辑还不够丝滑，但修正后解决了很多问题。
 4. 模型评估时，测试集样本数量过少，会出现无法评估的问题。（未解决|目前方案数据扩充）
+
+
+数据预处理
+<img src="docs/DlBattery1.jpg" width="600" alt="演示图">
+
+模型训练
+<img src="docs/DlBattery2.jpg" width="600" alt="演示图">
+
+模型评估
+<img src="docs/DlBattery3.jpg" width="600" alt="演示图">
+
+模型推断
+<img src="docs/DlBattery4.jpg" width="600" alt="演示图">
