@@ -58,13 +58,17 @@ pretrained_dl_classifier_resnet50.hdl
 
 
 数据预处理
+
 <img src="docs/DlBattery1.jpg" width="600" alt="演示图">
 
 模型训练
+
 <img src="docs/DlBattery2.jpg" width="600" alt="演示图">
 
 模型评估
+
 <img src="docs/DlBattery3.jpg" width="600" alt="演示图">
 
 模型推断
+
 <img src="docs/DlBattery4.jpg" width="600" alt="演示图">
