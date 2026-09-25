@@ -4,6 +4,7 @@
 - [BeadDetection](#BeadDetection)
 - [Pipe3DMatching](#Pipe3DMatching)
 - [DLWithClassification_Battery](#DLWithClassification_Battery)
+- [物料图像采集与分析系统开发](#物料图像采集与分析系统开发)
 
 # VehicleCard
 <img src="docs/VehicleCard1.jpg" width="600" alt="演示图">
@@ -79,3 +80,16 @@ pretrained_dl_classifier_resnet50.hdl
 模型推断
 
 <img src="docs/DlBattery4.jpg" width="600" alt="演示图">
+
+
+# 物料图像采集与分析系统开发
+
+需求目标：
+```
+1. 物料图像采集与调整
+2. Blob分析与界面交互
+3. 单相机标定与内外参存储
+4. 物料轮廓提取与尺寸测量
+5. 物料在相机下的跟随测量
+6. 测量结果显示与表格管理
+```
